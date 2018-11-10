@@ -9,8 +9,7 @@ from torch.nn.functional import upsample
 img = io.imread('data/britney.png')
 def timereps(reps, func):
     start = time()
-    for i in range(0, reps):
-        func()
+    [func() for _ in range(0, reps)]
     end = time()
     return (end - start) / reps
 
