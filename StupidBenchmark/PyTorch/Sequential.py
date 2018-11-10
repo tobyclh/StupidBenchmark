@@ -60,6 +60,12 @@ print(f'Sequential (CPU): {average_duration}')
 average_duration = timereps(1000, lambda : forward_discrete(x))
 print(f'Discrete (CPU): {average_duration}')
 
-## Conclusion : barely any difference
+"""
+Conclusion : barely any difference
+Edit : 
+this is justified by the fact that nn.Sequential is barely a syntactic sugar, unless they actually start to compile it it wouldn't make any different
+https://pytorch.org/docs/stable/_modules/torch/nn/modules/container.html#Sequential
+"""
+
 
 
